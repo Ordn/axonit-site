@@ -4,11 +4,22 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Axon IT | Consultoria em Tecnologia</title>
 
-<meta name="description" content="Consultoria em infraestrutura, cloud, segurança da informação e automação de processos.">
+<meta name="description" content="Axon IT - Consultoria em infraestrutura, cloud, segurança da informação e automação de processos para empresas.">
+<meta name="keywords" content="consultoria TI, infraestrutura, cloud, segurança da informação, automação">
+<meta name="author" content="Axon IT">
+
+<!-- Google Analytics (adicione seu ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'GA_MEASUREMENT_ID');
+</script>
 
 <style>
 
@@ -31,51 +42,58 @@ margin:auto;
 padding:40px 20px;
 }
 
+/* HEADER */
+
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding-bottom:30px;
 border-bottom:1px solid #1d2433;
+padding-bottom:25px;
 }
 
 .logo{
-font-size:22px;
+display:flex;
+align-items:center;
+font-size:20px;
 font-weight:600;
 letter-spacing:1px;
 }
 
+.logo svg{
+margin-right:10px;
+}
+
 .logo span{
 color:#4da3ff;
-margin-left:6px;
 }
 
 nav a{
+margin-left:25px;
 text-decoration:none;
 color:#9aa4b2;
-margin-left:28px;
 font-size:14px;
-transition:0.2s;
 }
 
 nav a:hover{
-color:#ffffff;
+color:white;
 }
+
+/* HERO */
 
 .hero{
 padding:110px 0;
-max-width:700px;
 }
 
 .hero h1{
 font-size:48px;
-font-weight:600;
 margin-bottom:20px;
 }
 
 .hero p{
-color:#9aa4b2;
 font-size:20px;
+color:#9aa4b2;
+max-width:650px;
 margin-bottom:40px;
 }
 
@@ -83,24 +101,44 @@ margin-bottom:40px;
 display:inline-block;
 background:#4da3ff;
 color:#071019;
-padding:14px 26px;
+padding:14px 28px;
 border-radius:6px;
 text-decoration:none;
 font-weight:500;
 }
 
-.signal{
+/* NEURAL ANIMATION */
+
+.neural{
 margin-top:60px;
-height:2px;
-background:linear-gradient(90deg,transparent,#4da3ff,transparent);
-background-size:200%;
-animation:signalMove 4s linear infinite;
+height:120px;
 }
 
-@keyframes signalMove{
-0%{background-position:200%}
-100%{background-position:-200%}
+.neural line{
+stroke:#223047;
+stroke-width:2;
 }
+
+.signal{
+stroke:#4da3ff;
+stroke-width:3;
+stroke-dasharray:6;
+animation:flow 3s linear infinite;
+}
+
+@keyframes flow{
+
+from{
+stroke-dashoffset:0;
+}
+
+to{
+stroke-dashoffset:-40;
+}
+
+}
+
+/* SECTIONS */
 
 section{
 padding:90px 0;
@@ -131,21 +169,24 @@ border-color:#4da3ff;
 
 .card h3{
 margin-bottom:10px;
-font-size:18px;
 }
 
 .card p{
-font-size:14px;
 color:#9aa4b2;
+font-size:14px;
 }
+
+/* ABOUT */
 
 .about p{
 max-width:700px;
 color:#9aa4b2;
 }
 
+/* CONTACT */
+
 .contact-item{
-margin-bottom:14px;
+margin-bottom:15px;
 }
 
 .contact a{
@@ -153,16 +194,18 @@ color:#4da3ff;
 text-decoration:none;
 }
 
+/* FOOTER */
+
 footer{
-margin-top:60px;
 border-top:1px solid #1d2433;
 padding:30px 0;
-font-size:13px;
+margin-top:50px;
 text-align:center;
+font-size:13px;
 color:#6e7681;
 }
 
-/* WhatsApp button */
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -174,13 +217,12 @@ padding:14px 18px;
 border-radius:50px;
 text-decoration:none;
 font-size:14px;
-box-shadow:0 8px 20px rgba(0,0,0,0.25);
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
 }
 
 </style>
 
 </head>
-
 
 <body>
 
@@ -189,13 +231,26 @@ box-shadow:0 8px 20px rgba(0,0,0,0.25);
 <header>
 
 <div class="logo">
+
+<!-- SVG LOGO -->
+<svg width="28" height="28" viewBox="0 0 24 24">
+<circle cx="4" cy="12" r="2" fill="#4da3ff"/>
+<circle cx="12" cy="12" r="2" fill="#4da3ff"/>
+<circle cx="20" cy="12" r="2" fill="#4da3ff"/>
+<line x1="6" y1="12" x2="10" y2="12" stroke="#4da3ff"/>
+<line x1="14" y1="12" x2="18" y2="12" stroke="#4da3ff"/>
+</svg>
+
 Axon <span>IT</span>
+
 </div>
 
 <nav>
+
 <a href="#servicos">Serviços</a>
 <a href="#sobre">Sobre</a>
 <a href="#contato">Contato</a>
+
 </nav>
 
 </header>
@@ -206,14 +261,27 @@ Axon <span>IT</span>
 <h1>Consultoria em Tecnologia</h1>
 
 <p>
-A Axon IT conecta estratégia, infraestrutura e inovação para
-empresas que precisam de ambientes de TI seguros,
-escaláveis e eficientes.
+A Axon IT conecta estratégia, infraestrutura e inovação para empresas
+que precisam de ambientes de TI seguros, eficientes e escaláveis.
 </p>
 
 <a class="btn" href="#contato">Entrar em contato</a>
 
-<div class="signal"></div>
+<div class="neural">
+
+<svg width="100%" height="120">
+
+<line x1="0" y1="60" x2="200" y2="60"></line>
+<line x1="200" y1="60" x2="400" y2="20"></line>
+<line x1="200" y1="60" x2="400" y2="100"></line>
+<line x1="400" y1="20" x2="650" y2="60"></line>
+<line x1="400" y1="100" x2="650" y2="60"></line>
+
+<line class="signal" x1="0" y1="60" x2="650" y2="60"></line>
+
+</svg>
+
+</div>
 
 </section>
 
@@ -227,32 +295,28 @@ escaláveis e eficientes.
 <div class="card">
 <h3>Consultoria em TI</h3>
 <p>
-Diagnóstico de ambientes tecnológicos e planejamento
-estratégico para evolução da infraestrutura.
+Avaliação e planejamento estratégico da infraestrutura tecnológica.
 </p>
 </div>
 
 <div class="card">
-<h3>Cloud & Infraestrutura</h3>
+<h3>Cloud e Infraestrutura</h3>
 <p>
-Implantação e gestão de servidores, redes corporativas
-e ambientes em nuvem.
+Implantação e gestão de servidores, redes e ambientes em nuvem.
 </p>
 </div>
 
 <div class="card">
 <h3>Segurança da Informação</h3>
 <p>
-Proteção de dados, políticas de segurança
-e arquitetura segura para empresas.
+Proteção de dados, políticas de segurança e arquitetura segura.
 </p>
 </div>
 
 <div class="card">
-<h3>Automação de Processos</h3>
+<h3>Automação</h3>
 <p>
-Automação de rotinas operacionais para ganho
-de eficiência e redução de custos.
+Automação de processos para ganho de eficiência operacional.
 </p>
 </div>
 
@@ -266,25 +330,22 @@ de eficiência e redução de custos.
 <h2>Sobre a Axon IT</h2>
 
 <p>
-O nome Axon vem da estrutura responsável por transmitir sinais
-entre neurônios. Inspirada nesse conceito, a Axon IT conecta
-tecnologia, estratégia e inovação para garantir que as
-informações fluam com segurança e eficiência dentro das
-organizações.
+Inspirada no conceito de um axônio, estrutura responsável pela
+transmissão de informações entre neurônios, a Axon IT conecta
+tecnologia, estratégia e inovação para garantir que as informações
+fluam com segurança e eficiência dentro das organizações.
 </p>
 
 </section>
 
 
-<section class="contact" id="contato">
+<section id="contato">
 
 <h2>Contato</h2>
 
 <div class="contact-item">
 Email:
-<a href="mailto:leandro@axonit.com.br">
-leandro@axonit.com.br
-</a>
+<a href="mailto:leandro@axonit.com.br">leandro@axonit.com.br</a>
 </div>
 
 <div class="contact-item">
@@ -302,11 +363,12 @@ linkedin.com/in/leandroflima
 
 
 <footer>
+
 © 2026 Axon IT. Todos os direitos reservados.
+
 </footer>
 
 </div>
-
 
 <a class="whatsapp" href="https://wa.me/5511980264021" target="_blank">
 WhatsApp
