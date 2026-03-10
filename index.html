@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Axon IT | Consultoria em Tecnologia</title>
+
+<meta name="description" content="Consultoria em infraestrutura, cloud, segurança da informação e automação de processos.">
 
 <style>
 
@@ -13,12 +16,12 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 
 body{
-background:#0f172a;
-color:#e5e7eb;
+background:#0b0f19;
+color:#e6edf3;
 line-height:1.6;
 }
 
@@ -32,8 +35,8 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding-bottom:40px;
-border-bottom:1px solid #1e293b;
+padding-bottom:30px;
+border-bottom:1px solid #1d2433;
 }
 
 .logo{
@@ -43,19 +46,25 @@ letter-spacing:1px;
 }
 
 .logo span{
-color:#38bdf8;
-margin-left:4px;
+color:#4da3ff;
+margin-left:6px;
 }
 
 nav a{
-color:#cbd5f5;
-margin-left:30px;
 text-decoration:none;
+color:#9aa4b2;
+margin-left:28px;
 font-size:14px;
+transition:0.2s;
+}
+
+nav a:hover{
+color:#ffffff;
 }
 
 .hero{
-padding:100px 0;
+padding:110px 0;
+max-width:700px;
 }
 
 .hero h1{
@@ -65,28 +74,40 @@ margin-bottom:20px;
 }
 
 .hero p{
+color:#9aa4b2;
 font-size:20px;
-color:#94a3b8;
-max-width:600px;
 margin-bottom:40px;
 }
 
-.button{
+.btn{
 display:inline-block;
-background:#38bdf8;
-color:#020617;
-padding:14px 28px;
+background:#4da3ff;
+color:#071019;
+padding:14px 26px;
 border-radius:6px;
 text-decoration:none;
 font-weight:500;
 }
 
-.services{
-padding:80px 0;
-border-top:1px solid #1e293b;
+.signal{
+margin-top:60px;
+height:2px;
+background:linear-gradient(90deg,transparent,#4da3ff,transparent);
+background-size:200%;
+animation:signalMove 4s linear infinite;
 }
 
-.services h2{
+@keyframes signalMove{
+0%{background-position:200%}
+100%{background-position:-200%}
+}
+
+section{
+padding:90px 0;
+border-top:1px solid #1d2433;
+}
+
+h2{
 font-size:28px;
 margin-bottom:40px;
 }
@@ -94,13 +115,18 @@ margin-bottom:40px;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
+gap:28px;
 }
 
 .card{
-border:1px solid #1e293b;
-padding:30px;
+border:1px solid #1d2433;
+padding:28px;
 border-radius:8px;
+transition:0.2s;
+}
+
+.card:hover{
+border-color:#4da3ff;
 }
 
 .card h3{
@@ -110,53 +136,51 @@ font-size:18px;
 
 .card p{
 font-size:14px;
-color:#94a3b8;
-}
-
-.about{
-padding:80px 0;
-border-top:1px solid #1e293b;
-}
-
-.about h2{
-font-size:28px;
-margin-bottom:20px;
+color:#9aa4b2;
 }
 
 .about p{
 max-width:700px;
-color:#94a3b8;
-}
-
-.contact{
-padding:80px 0;
-border-top:1px solid #1e293b;
-}
-
-.contact h2{
-font-size:28px;
-margin-bottom:30px;
+color:#9aa4b2;
 }
 
 .contact-item{
-margin-bottom:15px;
+margin-bottom:14px;
 }
 
 .contact a{
-color:#38bdf8;
+color:#4da3ff;
 text-decoration:none;
 }
 
 footer{
-border-top:1px solid #1e293b;
+margin-top:60px;
+border-top:1px solid #1d2433;
 padding:30px 0;
-text-align:center;
 font-size:13px;
-color:#64748b;
+text-align:center;
+color:#6e7681;
+}
+
+/* WhatsApp button */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-size:14px;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
 }
 
 </style>
+
 </head>
+
 
 <body>
 
@@ -182,19 +206,19 @@ Axon <span>IT</span>
 <h1>Consultoria em Tecnologia</h1>
 
 <p>
-A Axon IT oferece consultoria especializada em infraestrutura,
-cloud, segurança e automação de processos para empresas que
-buscam eficiência e confiabilidade em tecnologia.
+A Axon IT conecta estratégia, infraestrutura e inovação para
+empresas que precisam de ambientes de TI seguros,
+escaláveis e eficientes.
 </p>
 
-<a class="button" href="#contato">
-Entrar em contato
-</a>
+<a class="btn" href="#contato">Entrar em contato</a>
+
+<div class="signal"></div>
 
 </section>
 
 
-<section class="services" id="servicos">
+<section id="servicos">
 
 <h2>Serviços</h2>
 
@@ -203,32 +227,32 @@ Entrar em contato
 <div class="card">
 <h3>Consultoria em TI</h3>
 <p>
-Diagnóstico de ambiente tecnológico e planejamento estratégico
-para evolução da infraestrutura.
+Diagnóstico de ambientes tecnológicos e planejamento
+estratégico para evolução da infraestrutura.
 </p>
 </div>
 
 <div class="card">
-<h3>Cloud e Infraestrutura</h3>
+<h3>Cloud & Infraestrutura</h3>
 <p>
-Implementação e gestão de ambientes em nuvem,
-servidores e redes corporativas.
+Implantação e gestão de servidores, redes corporativas
+e ambientes em nuvem.
 </p>
 </div>
 
 <div class="card">
 <h3>Segurança da Informação</h3>
 <p>
-Boas práticas, proteção de dados e arquitetura segura
-para ambientes corporativos.
+Proteção de dados, políticas de segurança
+e arquitetura segura para empresas.
 </p>
 </div>
 
 <div class="card">
-<h3>Automação</h3>
+<h3>Automação de Processos</h3>
 <p>
-Automação de processos operacionais
-para aumentar eficiência e reduzir custos.
+Automação de rotinas operacionais para ganho
+de eficiência e redução de custos.
 </p>
 </div>
 
@@ -242,10 +266,11 @@ para aumentar eficiência e reduzir custos.
 <h2>Sobre a Axon IT</h2>
 
 <p>
-Inspirada no conceito de um axônio, responsável pela transmissão
-de informações entre neurônios, a Axon IT conecta estratégia,
-infraestrutura e inovação para garantir que a tecnologia de
-uma empresa funcione de forma eficiente, segura e escalável.
+O nome Axon vem da estrutura responsável por transmitir sinais
+entre neurônios. Inspirada nesse conceito, a Axon IT conecta
+tecnologia, estratégia e inovação para garantir que as
+informações fluam com segurança e eficiência dentro das
+organizações.
 </p>
 
 </section>
@@ -256,7 +281,10 @@ uma empresa funcione de forma eficiente, segura e escalável.
 <h2>Contato</h2>
 
 <div class="contact-item">
-Email: <a href="mailto:leandro@axonit.com.br">leandro@axonit.com.br</a>
+Email:
+<a href="mailto:leandro@axonit.com.br">
+leandro@axonit.com.br
+</a>
 </div>
 
 <div class="contact-item">
@@ -274,12 +302,15 @@ linkedin.com/in/leandroflima
 
 
 <footer>
-
 © 2026 Axon IT. Todos os direitos reservados.
-
 </footer>
 
 </div>
+
+
+<a class="whatsapp" href="https://wa.me/5511980264021" target="_blank">
+WhatsApp
+</a>
 
 </body>
 </html>
